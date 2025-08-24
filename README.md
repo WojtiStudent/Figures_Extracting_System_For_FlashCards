@@ -29,8 +29,7 @@ Obrazki do fiszek/
 ├── requirements.txt                    # Python dependencies and versions
 ├── poc.ipynb                           # Proof of concept Jupyter notebook
 ├── data/                               # Sample and test images
-├── scripts/                            # Utility and execution scripts
-│   └── run_for_folder.py               # Main script to process entire folders
+├── run_for_folder.py                   # Main script to process entire folder
 └── src/                                # Core source code
     ├── system.py                       # Main system orchestration
     └── components/                     # Modular components
@@ -61,6 +60,7 @@ The main entry point is `scripts/run_for_folder.py`, which processes entire fold
         * Idk how to handle detecting captions
 * ~~Try YOLO-E to extract figures~~
     * YOLO-E works well for "naturally detectable things" (e.g. cats, dogs, laptops), but "figures in book" is kind of "fuzzy thing" with no strict description. This makes YOLO-E bad choice for this project
+* Adjust way to extend figures by paragraphs (threshold is maybe to large)
 * Make DB to track real-use detections accuracy
 * Add MLFlow add try to upgrade the system 
 

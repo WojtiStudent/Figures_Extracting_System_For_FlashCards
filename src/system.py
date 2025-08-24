@@ -2,12 +2,10 @@ import os
 import logging
 from dotenv import load_dotenv
 
-from components.figure_extractor import FigureExtractor
-from components.image_size_reducer import ImageSizeReducer
-from components.filename_generator import FilenameGenerator
-from components.save_handler import SaveHandler
-
-load_dotenv(".env", override=True)
+from src.components.figure_extractor import FigureExtractor
+from src.components.image_size_reducer import ImageSizeReducer
+from src.components.filename_generator import FilenameGenerator
+from src.components.save_handler import SaveHandler
 
 logger = logging.getLogger(__name__)
 

@@ -9,9 +9,12 @@ import os
 import sys
 import argparse
 from pathlib import Path
+import logging
 from dotenv import load_dotenv
 
 from src.system import System
+
+logging.basicConfig(level=logging.INFO)
 
 
 def setup_argument_parser() -> argparse.ArgumentParser:
@@ -58,7 +61,7 @@ def main():
         print(f"Error: Input folder '{args.input_folder}' does not exist.")
         sys.exit(1)
     
-    process_folder(input_folder, args.output)
+    process_folder(input_folder, args.output_folder)
     
 
 if __name__ == "__main__":

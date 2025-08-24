@@ -4,7 +4,7 @@ from PIL import Image, ImageOps
 import base64
 import logging
 
-from bounding_box import BoundingBox, BoundingBoxType
+from src.components.bounding_box import BoundingBox, BoundingBoxType
 
 logger = logging.getLogger(__name__)
 

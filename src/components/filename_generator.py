@@ -5,6 +5,8 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+CHAR_LIMIT = 60
+
 class FilenameGenerator:
     prompt = """
 Otrzymasz zdjęcie strony z Vademecuum Biologicznego. Strona zawiera tekst oraz przede wszystkim ilustrację.
@@ -66,4 +68,4 @@ Cykl_Krebsa
         )
 
         logger.info("Generated filename: %s", response.output_text)
-        return response.output_text
+        return response.output_text.strip()[:CHAR_LIMIT]

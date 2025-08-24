@@ -30,14 +30,13 @@ class SaveHandler:
         # try save file
         files_in_source_image_folder = os.listdir(os.path.join(self.output_folder, source_image_filename))
         final_dir_path = os.path.join(self.output_folder, source_image_filename)
-        filename_template = f"{generated_filename}.jpg"
-        filename = filename_template
+        filename = f"{generated_filename}.jpg"
         duplicate_counter = 0
 
         while filename in files_in_source_image_folder:
             logger.debug("Filename %s already exists in source image folder. Incrementing duplicate counter.", filename)
             duplicate_counter += 1
-            filename = f"{filename_template}_{duplicate_counter}"
+            filename = f"{generated_filename}_{duplicate_counter}.jpg"
 
         logger.debug("Saving figure to %s", os.path.join(final_dir_path, filename))
         figure.save(os.path.join(final_dir_path, filename))

@@ -4,7 +4,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-DOCUMENT_INTELLIGENCE_LIMIT = 1024 * 1024 * 10
+DOCUMENT_INTELLIGENCE_LIMIT = 1024 * 1024 * 4
 
 class ImageSizeReducer:
     def __init__(self, start_quality=95, max_size=DOCUMENT_INTELLIGENCE_LIMIT):
