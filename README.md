@@ -55,11 +55,11 @@ The system relies on several key Python packages:
 The main entry point is `scripts/run_for_folder.py`, which processes entire folder of page images, extracts figures and saves in output directory. 
 
 ### Ideas & TODO
-* Try LangSAM to extract figures
+* ~~Try LangSAM to extract figures~~
     * It usually marks whole page as figure. Describing how figures looks like (e.g. "Two ovals connected with two horizontal arrows") improves results, but:
         * Generating figures descriptions (via LLMs) generates costs and makes system more buggy and more non-deterministic  
         * Idk how to handle detecting captions
-* Try YOLO-E to extract figures
+* ~~Try YOLO-E to extract figures~~
     * YOLO-E works well for "naturally detectable things" (e.g. cats, dogs, laptops), but "figures in book" is kind of "fuzzy thing" with no strict description. This makes YOLO-E bad choice for this project
 * Make DB to track real-use detections accuracy
 * Add MLFlow add try to upgrade the system 
